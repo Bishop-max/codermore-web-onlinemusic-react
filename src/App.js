@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { memo } from 'react'
 
-function App() {
+import { renderRoutes } from 'react-router-config'
+import routes from '@/router'
+import { BrowserRouter as Router } from 'react-router-dom'
+import store from '@/store'
+import { Provider } from 'react-redux'
+
+
+import MoreAppHeader from '@/components/more-app-header'
+import MoreAppFooter from '@/components/more-app-footer'
+import PlayerBar from '@/pages/player/app-player-bar'
+import MoreBackTop from '@/components/more-back-top'
+
+export default memo(function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <Provider store={store}>
+      <Router>
+        <MoreAppHeader/>
+        {renderRoutes(routes)}
+        <MoreAppFooter />
+        <MoreBackTop/>
+        <PlayerBar />
+      </Router>
+    </Provider>
 
-export default App;
+  )
+})
+

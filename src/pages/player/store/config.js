@@ -1,0 +1,17 @@
+export const CHANGE_CURRENT_SONG = "player/CHANGE_CURRENT_SONG";
+export const CHANGE_PLAY_LIST = "player/CHANGE_PLAY_LIST";
+export const CHANGE_CURRENT_SONG_INDEX = "player/CHANGE_CURRENT_SONG_INDEX";
+
+export const CHANGE_SEQUENCE = "player/CHANGE_SEQUENCE"
+export const CHANGE_LYRIC_LIST = "player/CHANGE_LYRIC_LIST"
+
+export const CHANGE_CURRENT_LYRIC_INDEX = "player/CHANGE_CURRENT_LYRIC_INDEX"
+
+//相似歌曲、歌单
+export const CHANGE_SIMISONGS = "player/CHANGE_SIMISONGS"
+export const CHANGE_SIMIPLAY_LIST = "player/CHANGE_SIMIPLAY_LIST"
+
+//评论
+export const CHANGE_COMMENTS = "player/CHANGE_COMMENTS"
+export const CHANGE_HOT_COMMENTS = "player/CHANGE_HOT_COMMENTS"
+export const CHANGE_COMMENT_COUNT = "player/CHANGE_COMMENT_COUNT"
